@@ -11,7 +11,7 @@ const app = express()
 dotenv.config()
 app.use(express.json())
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MongoURl)
     .then(console.log('Connected to DB'))
     .catch((e) => { console.log(e) }
     );
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
     res.send('<h1>SERVER UP</h1>')
 })
 
-app.listen('3000', () => {
-    console.log('SERVER UP => 3000');
+app.listen('5000', () => {
+    console.log('SERVER UP => 5000');
 })
 
